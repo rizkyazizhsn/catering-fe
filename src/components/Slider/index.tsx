@@ -1,3 +1,5 @@
+"use client";
+
 import React, { Children } from "react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -19,7 +21,7 @@ function Slider({
   swiperSlideClassName,
   hasPagination,
 }: Props) {
-  let modules = [Navigation, A11y];
+  const modules = [Navigation, A11y];
   if (!!hasPagination) {
     modules.push(Pagination);
   }
