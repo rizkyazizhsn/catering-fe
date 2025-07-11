@@ -1,4 +1,4 @@
-export function DefaultPage() {
+export default function DefaultPage() {
   
   return null
 }

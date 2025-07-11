@@ -3,19 +3,9 @@ import { Poppins } from "next/font/google";
 import "@/assets/css/index.css";
 
 const poppins = Poppins({
-  weight: ['400', '600', '700'],
+  weight: ["400", "600", "700"],
   subsets: ["latin"],
-})
-
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
+});
 
 export const metadata: Metadata = {
   title: {
@@ -27,17 +17,17 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  modal
+  modal,
 }: Readonly<{
   children: React.ReactNode;
   modal: React.ReactNode;
 }>) {
   return (
     <html lang="en">
-      <body
-        className={poppins.className}
-      >
-        {children}
+      <body className={poppins.className}>
+        <main className="container max-w-sm mx-auto flex flex-col gap-y-5 relative pt-16">
+          {children}
+        </main>
         {modal}
       </body>
     </html>
