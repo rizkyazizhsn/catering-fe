@@ -1,19 +1,17 @@
-"use client"
+"use client";
 
-import { useSearchParams } from "next/navigation"
+import { useSearchParams } from "next/navigation";
 
 function useQueryParams() {
-  const query = useSearchParams()
+  const searchParams = useSearchParams();
 
-  const queryParams: {[key: string]: string} = {
+  const queryParams: { [key: string]: string } = {};
 
+  for (const [key, value] of searchParams.entries()) {
+    queryParams[key] = value;
   }
 
-  for (const [key, value] of query.entries()) {
-    queryParams[key] = value
-  }
-
-  return queryParams
+  return queryParams;
 }
 
-export default useQueryParams
+export default useQueryParams;

@@ -2,6 +2,7 @@ import Logo from "@/assets/images/logo.svg";
 import FlagID from "@/assets/images/flag-id.svg";
 import Image from "next/image";
 import Slider from "@/components/Slider";
+import Categories from "@/components/Categories";
 
 export default function Home() {
   return (
@@ -66,6 +67,8 @@ export default function Home() {
           </div>
         </Slider>
       </section>
+
+      <Categories />
     </>
   );
 }
